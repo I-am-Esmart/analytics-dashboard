@@ -1,13 +1,19 @@
-import Link from "next/link";
+"use client";
+import DashboardLeft from "@/components/dashboard/dashboard_left/DashboardLeft";
+import DashboardRight from "@/components/dashboard/dashboard_right/DashboardRight";
+import Navbar from "@/components/navbar/Navbar";
+import Sidebar from "@/components/sidebar/Sidebar";
+import React from "react";
 
-const HomePage = () => {
+const page = () => {
   return (
-    <div>
-      <h1 className="text-5xl mb-8 font-bold">Nextjs course</h1>
-      <Link href="/client" className="btn btn-accent">
-        get started
-      </Link>
+    <div className="h-screen">
+      <Navbar />
+      <Sidebar />
+      <DashboardLeft />
+      <DashboardRight />
     </div>
   );
 };
-export default HomePage;
+
+export default page;
